@@ -85,27 +85,28 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
                 _svcIsUsingPublicServer.value),
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Text(', ', style: TextStyle(fontSize: em)),
-                Flexible(
-                  child: InkWell(
-                    onTap: onUsePublicServerGuide,
-                    child: Row(
-                      children: [
-                        Flexible(
-                          child: Text(
-                            translate('setup_server_tip'),
-                            style: TextStyle(
-                                decoration: TextDecoration.underline,
-                                fontSize: em),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                )
-              ],
-            ),
+              //去掉底部“如果需要更快连接速度，你可以选择自建服务器”
+            //   children: [
+            //     Text(', ', style: TextStyle(fontSize: em)),
+            //     Flexible(
+            //       child: InkWell(
+            //         onTap: onUsePublicServerGuide,
+            //         child: Row(
+            //           children: [
+            //             Flexible(
+            //               child: Text(
+            //                 translate('setup_server_tip'),
+            //                 style: TextStyle(
+            //                     decoration: TextDecoration.underline,
+            //                     fontSize: em),
+            //               ),
+            //             ),
+            //           ],
+            //         ),
+            //       ),
+            //     )
+            //   ],
+            // ),
           ),
         );
 
