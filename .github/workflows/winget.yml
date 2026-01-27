@@ -1,15 +1,16 @@
-name: Publish to WinGet
+name: CmeosDesk
 on:
   release:
     types: [released]
   workflow_dispatch:
 jobs:
-  publish:
-    runs-on: ubuntu-latest
+  main:
+    runs-on: windows-latest
     steps:
-      - uses: vedantmgoyal9/winget-releaser@main
+      - name: Clone repository
+        uses: actions/checkout@v4
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
-          identifier: RustDesk.RustDesk
-          version: "1.4.5"
-          release-tag: "1.4.5"
-          token: ${{ secrets.WINGET_TOKEN }}
+          channel: stable
+      - run: flutter build windows
