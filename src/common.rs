@@ -1087,7 +1087,7 @@ fn get_api_server_(api: String, custom: String) -> String {
     }
     //"https://admin.rustdesk.com".to_owned()
     //去掉api接口
-    "http://58.241.19.114:21118".to_owned()
+    "".to_owned()
 }
 
 #[inline]
