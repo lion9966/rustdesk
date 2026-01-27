@@ -83,9 +83,9 @@ class _OnlineStatusWidgetState extends State<OnlineStatusWidget> {
             offstage: !(!_svcStopped.value &&
                 stateGlobal.svcStatus.value == SvcStatus.ready &&
                 _svcIsUsingPublicServer.value),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              //去掉底部“如果需要更快连接速度，你可以选择自建服务器”
+            //去掉底部“如果需要更快连接速度，你可以选择自建服务器”
+            // child: Row(
+            //   crossAxisAlignment: CrossAxisAlignment.center,              
             //   children: [
             //     Text(', ', style: TextStyle(fontSize: em)),
             //     Flexible(
